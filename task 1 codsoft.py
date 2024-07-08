@@ -12,7 +12,7 @@ class ToDoList:
             return
         print(f"\n{title or 'Tasks'}:")
         for i, task in enumerate(tasks, start=1):
-            prefix = "[DONE] " if task.startswith("[DONE]") else "* "
+            prefix = "[DONE] " if task.startswith("[DONE]") else " "
             print(f"{i}. {prefix}{task}")
     def modify_task(self, task_index, action):
         try:
