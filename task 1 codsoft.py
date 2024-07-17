@@ -1,10 +1,8 @@
 class ToDoList:
     def __init__(self):
         self.tasks = []
-    
     def add_task(self, task):
         self.tasks.append(task)
-    
     def list_tasks(self, filter_func=None, title=None):
         tasks = list(filter(filter_func, self.tasks)) if filter_func else self.tasks
         if not tasks:
@@ -29,9 +27,7 @@ while True:
     print("\nTo-Do List App")
     print("1. Add Task  2. List Tasks  3. Mark Task Done")
     print("4. Remove Task  5. Exit  6. Completed Tasks  7. Pending Tasks")
-    
     choice = input("Enter your choice: ")
-    
     if choice == '1':
         todo_list.add_task(input("Enter a new task: "))
         print("Task added successfully.")
@@ -48,5 +44,4 @@ while True:
         todo_list.list_tasks(lambda x: not x.startswith("[DONE]"), "Pending Tasks")
     else:
         print("Invalid choice.")
-
 print("Exiting the To-Do List App.")
